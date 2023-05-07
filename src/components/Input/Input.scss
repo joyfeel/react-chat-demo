@@ -1,0 +1,37 @@
+.input {
+    display: flex;
+    flex-direction: column;
+
+    &__label {
+        display: block;
+        margin-bottom: 5px;
+        color: #000;
+        font-weight: 600;
+    }
+
+    &__container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__field {
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        outline: none;
+
+        &:focus {
+            border-color: #000;
+        }
+    }
+
+    &__error {
+        display: block;
+        margin-top: 2px;
+        color: #ff0000;
+        font-size: 0.8rem;
+    }
+}
