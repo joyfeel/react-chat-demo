@@ -1,5 +1,5 @@
 
-import { useState, useEffect, useRef, useTransition } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { doc, onSnapshot } from 'firebase/firestore'
 import { fireStore } from '../../utils/firebaseStore';
@@ -63,8 +63,6 @@ const Room = () => {
             </div >
         );
     }
-
-    console.log(typing)
 
     useEffect(() => {
         if (chatRoom.code !== '') {
