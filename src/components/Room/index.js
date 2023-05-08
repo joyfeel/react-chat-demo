@@ -49,7 +49,7 @@ const Room = () => {
     }
 
     const ChatMessage = (props) => {
-        const { message, isMe } = props;
+        const { message, lastMessage, isMe } = props;
         const { userName, content } = message
 
         return (
@@ -57,7 +57,7 @@ const Room = () => {
                 <div className='room__content'>
                     {content}
                 </div>
-                <div className='room__username'>
+                <div className={`room__username ${lastMessage?.userName === userName ? 'room__username--placeholder' : ''}`}>
                     {userName}
                 </div>
             </div >
@@ -102,11 +102,12 @@ const Room = () => {
                 <Button onClick={handleLeaveRoom}>Leave Room</Button>
             </div>
             <div className='room__messages'>
-                {chatRoom?.messages?.map(message => {
+                {chatRoom?.messages?.map((message, index) => {
                     return (
                         <ChatMessage
                             key={message.createdAt}
                             message={message}
+                            lastMessage={chatRoom?.messages[index - 1]}
                             isMe={message.userName === userName}
                         />
                     )

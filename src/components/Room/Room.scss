@@ -58,11 +58,15 @@
     }
 
     &__username {
-        border-radius: 50%;
         background-color: #f5f5f5;
         border-radius: 1rem;
         padding: 0.5rem 1rem;
         margin-bottom: 0.5rem;
+
+        &--placeholder {
+            visibility: hidden;
+
+        }
     }
 
     &__typing {
