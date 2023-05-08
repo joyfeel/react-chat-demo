@@ -109,6 +109,6 @@ const LobbyModal = () => {
     )
 }
 
-LobbyModal.dispaayName = 'Modal';
+LobbyModal.displayName = 'Modal';
 
 export default LobbyModal;

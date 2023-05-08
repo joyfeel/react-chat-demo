@@ -25,7 +25,7 @@ Click [here](https://joyfeel.github.io/react-chat-demo/).
 - ⬜️ Delightful touches such as page transitions, animations, and loading indicators
 
 
-## $ Quick Start
+## Quick Start
 
 ```sh
 $ git clone https://github.com/joyfeel/react-chat-demo.git
